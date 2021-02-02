@@ -1,0 +1,115 @@
+/*La regola si applica a tutti gli elementi con classe .mieidiv che discendono da elementi con classe .titolo*/
+.titolo .mieidiv {
+    background-color: red;
+}
+
+/*La regola si applica a tutti gli elementi con classe .mieidiv figli di elementi con classe .titolo*/
+.titolo > .mieidiv {
+    background-color: red;
+}
+
+/*La regola si applica a tutti gli elementi con classe .mieidiv e mieidiv (devono avere entrambe le classi)*/
+.titolo.mieidiv {
+    background-color: red !important;
+}
+
+/*Sono due regole: si applicano a tutti gli elementi che hanno la classe titolo e mieidiv*/
+.titolo, .mieidiv {
+    background-color: red;
+}
+
+/* div#container p {
+    color: red;
+}
+
+nav > ul > li > a:visited {
+    color: black;
+}
+#container .titolo {
+    color: black;
+} */
+
+/* La regola viene applicata solo agli elementi 'li' che hanno come fratello adiacente 'li' */
+li + li {
+    color: red;
+}
+
+a[title] {
+    color: red;
+}
+
+a[title="Sito Corriere"] {
+    color: brown;
+}
+
+/* cerca la parola dentro il tag title  */
+a[title~="Sito"] {
+    color: blue;
+}
+
+/* colora gli elementi il cui title inizia */
+a[title^="Sito"] {
+    color: darkturquoise;
+}
+
+/* colora gli elementi il cui title termina */
+a[title$="Corriere"] {
+    color: gray;
+}
+
+/* esiste all'interno */
+a[title*="Prova"] {
+    color: tomato;
+}
+
+/* Identifica l'elemento HTML */
+:root {
+    background-color: bisque;
+}
+
+/* la regola si applica ai td discendenti di tr, tr che deve essere il quarto figlio rispetto a suo padre */
+/* tr:nth-child(odd) td:nth-child(even){
+    background-color: yellow;
+} */
+
+tr:nth-last-child(2) td{
+    background-color: yellow;
+}
+
+tr:last-child td {
+    background-color: red;
+}
+
+p span:only-child { background-color: green; }
+
+div > p { background-color: violet; }
+
+/* applica la regola ai p dentro div purché seguano questa regola */
+div > p:nth-of-type(2n + 1) { background-color: blue; }
+
+p:empty { background-color: aqua; }
+
+/* la pseudoclasse selezione tutti i div che non hanno la classe nero
+div:not(.nero)
+{} */
+
+/* Seleziona tutti gli elementi che non sono disabled
+input:not(:disabled){}
+*/
+
+input:checked { margin-left: 20px }
+
+/* article {
+    background-color: white;
+    color: black;
+    opacity: 0.5; /* (0,1) posso impostare un livello di opacità totale (1) o di trasparenza totale (0) dell'elemento
+} */
+
+article {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+    color: blue;
+    padding: 10px;
+    border-radius: 20px 40px 60px 80px;
+}
